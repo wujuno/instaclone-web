@@ -7,6 +7,7 @@
 - react-router-dom@5.2.0
 - styled-components
 - reactive variables
+- styled-reset
 
 ### To Do
 

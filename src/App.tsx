@@ -5,16 +5,9 @@ import Home from "./screens/Home";
 import Login from "./screens/Login";
 import NotFound from "./screens/NotFound";
 import { ThemeProvider } from "styled-components";
+import { darkTheme, GlobalStyles, lightTheme } from "./style";
 
-const lightTheme = {
-  fontColor: "#2c2c2c",
-  bgColor: "lightgray",
-};
 
-const darkTheme = {
-  fontColor: "white",
-  bgColor: "#2c2c2c",
-};
 
 
 function App() {
@@ -22,6 +15,7 @@ function App() {
   const darkMode = useReactiveVar(darkModeVar)
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+      <GlobalStyles/>
       <Router>
         <Switch>
           <Route path="/" exact>
