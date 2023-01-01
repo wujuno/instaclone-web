@@ -8,6 +8,7 @@ import { ThemeProvider } from "styled-components";
 import { darkTheme, GlobalStyles, lightTheme } from "./style";
 import SignUp from "./screens/SignUp";
 import routes from "./routes";
+import { HelmetProvider } from "react-helmet-async";
 
 
 
@@ -16,6 +17,7 @@ function App() {
   const isLoggedIn = useReactiveVar(isLoggedInVar)
   const darkMode = useReactiveVar(darkModeVar)
   return (
+    <HelmetProvider>
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <GlobalStyles/>
       <Router>
@@ -34,6 +36,7 @@ function App() {
         </Switch>
       </Router>
     </ThemeProvider>
+    </HelmetProvider>
   );
 }
 export default App;
