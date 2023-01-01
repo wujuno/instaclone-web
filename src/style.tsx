@@ -1,12 +1,13 @@
 import reset from 'styled-reset';
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, DefaultTheme } from "styled-components";
 
-export const lightTheme = {
+
+export const lightTheme:DefaultTheme = {
     fontColor: "#2c2c2c",
     bgColor: "lightgray",
   };
   
-export  const darkTheme = {
+export  const darkTheme:DefaultTheme = {
     fontColor: "white",
     bgColor: "#2c2c2c",
   };
